@@ -1,0 +1,30 @@
+Project Title
+AI-Powered RAG Assistant for Research Paper Question Answering using LangChain
+
+Summary
+This project implements a Retrieval-Augmented Generation (RAG) based AI assistant that helps users query research papers in PDF format and obtain meaningful, context-aware answers. It leverages LangChain's modular capabilities to build a complete pipeline that integrates document loading, text chunking, embedding generation, vector storage, retrieval, and a generative language model for final answer synthesis.
+
+The assistant is deployed through a user-friendly web interface powered by Gradio, where users can upload a research paper and ask natural language questions such as "What this paper is talking about?" The application processes the PDF content, searches relevant sections using vector similarity, and generates a concise and accurate response using a large language model.
+
+The project was developed as a capstone assignment for the Coursera course "Generative AI Applications with RAG and LangChain." The application demonstrates how RAG can be practically applied to optimize research workflows, enabling real-time comprehension and summarization of large volumes of scientific literature.
+
+Key Components
+Document Loader: Loads PDF content using LangChain's PyPDFLoader to extract structured text from uploaded research documents.
+
+Text Splitter: Segments the content into smaller chunks using RecursiveCharacterTextSplitter for improved embedding and retrieval performance.
+
+Embedding Generator: Converts document chunks into dense vector representations using Hugging Face embedding models.
+
+Vector Database: Stores the generated embeddings in a Chroma vector store to support efficient similarity search.
+
+Retriever: Fetches the most relevant document chunks based on the user's query using vector similarity metrics.
+
+Language Model: Uses a Hugging Face-compatible LLM (e.g., Falcon-7B-Instruct or Mistral) to synthesize final answers from the retrieved chunks.
+
+Gradio Interface: Provides a simple front-end for document upload and real-time question answering.
+
+Purpose and Impact
+The assistant addresses a growing challenge in research and analytics: the inability to efficiently keep up with the massive volume of academic content. By automating comprehension and summarization, it empowers researchers, students, and analysts to extract key information from documents rapidly, reducing cognitive load and improving productivity.
+
+This project showcases the potential of combining retrieval mechanisms with generative AI models and demonstrates how LangChain simplifies the orchestration of these complex workflows.
+
